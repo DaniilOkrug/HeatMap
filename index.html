@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeatMap</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="index.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>Users HeatMap</h1>
+        <div class="d-flex col">
+            <div class="toolbar col">
+                <div class="type-menu row">
+                    <div class="menu-item menu-week">
+                        <p>Week</p>
+                    </div>
+                    <div class="menu-item menu-month active">
+                        <p>Month</p>
+                    </div>
+                </div>
+                <div class="date row">
+                    <div class="year col">
+                        <p>Year</p>
+                        <input id="year" type="number" min="1900" max="2099" step="1" value="2021" />
+                    </div>
+                    <div class="month col">
+                        <p>Month</p>
+                        <input id="month" type="number" min="1" max="12" step="1" value="2" />
+                    </div>
+
+                    <a onclick="readFile();" class="btn">Show</a>
+                </div>
+            </div>
+            <div class="row">
+                <div id="heatmap">
+                    <div class="row">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="color-schema col">
+                    <div class="color row">
+                        <div class="box-red"></div>
+                        <p> -> bigger than 700</p>
+                    </div>
+                    <div class="color row">
+                        <div class="box-violet"></div>
+                        <p> -> 500 - 700</p>
+                    </div>
+                    <div class="color row">
+                        <div class="box-blue"></div>
+                        <p> -> 300 - 500</p>
+                    </div>
+                    <div class="color row">
+                        <div class="box-light_blue"></div>
+                        <p> -> 150 -300</p>
+                    </div>
+                    <div class="color row">
+                        <div class="box-aqua"></div>
+                        <p> -> less than 700</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>
